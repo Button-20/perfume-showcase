@@ -1,42 +1,257 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+Theme Name: Reddy - Bootstrap 5 Online shop HTML CSS Template
+Theme URI: https://templatejungle.com/
+Author: TemplatesJungle
+Author URI: https://templatejungle.com/
+Description: Reddy - Bootstrap 5 Online shop HTML CSS Template is specially designed product packaged for Online shop by TemplatesJungle.
+Version: 1.1
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
 
-html,
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+CSS STRUCTURE:
+
+1. VARIABLES
+2. GENERAL TYPOGRAPHY
+
+--------------------------------------------------------------*/
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  --heading-font: "Jost", Roboto, sans-serif;
+  --heading-font-weight: 300;
+  --heading-color: #74909B;
+  --heading-line-height: 1.24;
+  --swiper-theme-color: #626363;
+  --swiper-pagination-color: #626363;
+
+  /* bootstrap */
+  --bs-body-font-family: "Josefin Sans", Roboto, sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 300;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #626363;
+  --bs-body-color-rgb: 98, 99, 99;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-bg: #FFF;
+
+  --bs-primary: #E4EDF1;
+  --bs-secondary: #74909B;
+  --bs-black: #111;
+  --bs-white: #fff;
+  --bs-light: #f8f8f8;
+  --bs-dark: #626363;
+  --bs-gray: #9aa1a7;
+  --bs-gray-100: #F8F8F8;
+  --bs-gray-200: #E9E9E9;
+  --bs-gray-300: #D1D1D1;
+  --bs-gray-800: #3D3A38;
+
+  --bs-primary-rgb: 228, 237, 241;
+  --bs-secondary-rgb: 116, 144, 155;
+  --bs-black-rgb: 17, 17, 17;
+  --bs-light-rgb: 241, 241, 240;
+  --bs-dark-rgb: 33, 37, 41;
+
+  --bs-link-color: #111;
+  --bs-link-color-rgb: 255, 255, 255;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: #111;
+  --bs-link-hover-color-rgb: 255, 255, 255;
+
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csymbol xmlns='http://www.w3.org/2000/svg' id='plus' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z'/%3E%3C/symbol%3E");
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.03rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  line-height: var(--heading-line-height);
+}
+
+h1.light,
+.h1,
+h2.light,
+.h2,
+h3.light,
+.h3,
+h4.light,
+.h4,
+h5.light,
+.h5,
+h6.light,
+.h6 {
+  color: var(--bs-light);
+}
+
+h1,
+h2,
+h3 {
+  margin: 25px 0;
+}
+
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
+h1,
+.h1 {
+  font-size: 4.5rem;
+  letter-spacing: 8.8px;
+}
+
+h2,
+.h2 {
+  font-size: 3.6rem;
+  letter-spacing: 8.8px;
+}
+
+h3,
+.h3 {
+  font-size: 2.8rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.8rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.4rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* container fluid */
+.container-fluid {
+  max-width: 1800px;
+}
+
+@media (min-width: 1600px) {
+.container, .container-lg {
+    max-width: 1660px;
+  }
+.container, .container-md {
+    max-width: 1285px;
   }
 }
+
+/* list group */
+.list-group-item {
+  --bs-list-group-item-padding-x: 0;
+  --bs-list-group-border-width: 0;
+}
+
+/* btn */
+.btn {
+  --bs-btn-border-radius: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--bs-light);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-light);
+  --bs-btn-hover-bg: var(--bs-dark);
+  --bs-btn-hover-border-color: var(--bs-dark);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--bs-light);
+  --bs-btn-active-bg: var(--bs-dark);
+  --bs-btn-active-border-color: var(--bs-dark);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--bs-light);
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+.btn-light {
+  --bs-btn-color: var(--bs-dark);
+  --bs-btn-bg: var(--bs-light);
+  --bs-btn-hover-color: var(--bs-light);
+  --bs-btn-hover-bg: var(--bs-secondary);
+  --bs-btn-hover-border-color: var(--bs-secondary);
+  --bs-btn-focus-shadow-rgb: 211,212,213;
+  --bs-btn-active-color: var(--bs-dark);
+  --bs-btn-active-bg: var(--bs-light);
+  --bs-btn-active-border-color: var(--bs-secondary);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn-outline-dark.btn-bg-light {
+  --bs-btn-bg: var(--bs-light);
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-padding-x: 2.8rem;
+  --bs-btn-font-size: 1.25rem;
+}
+
+.btn.btn-shadow {
+  box-shadow: 0px 6px 39px 0px rgba(91, 45, 42, 0.20);
+}
+
+/* text white */
+.text-white {
+  --heading-color: var(--bs-light);
+  --bs-breadcrumb-item-active-color: var(--bs-light);
+  --bs-breadcrumb-divider-color: var(--bs-light);
+  --bs-link-color-rgb: var(--bs-light-rgb);
+  --bs-link-hover-color-rgb: var(--bs-light-rgb);
+}
+
+.text-white .nav-link {
+  --bs-nav-link-color: var(--bs-light);
+  --bs-nav-link-hover-color: var(--bs-light);
+  --bs-nav-link-active-color: var(--bs-light);
+  --bs-navbar-active-color: var(--bs-light);
+}
+
+/* open-up */
+.open-up {
+  clip-path: inset(48% 34% 36% 35%);
+}
+.aos-animate.open-up {
+  animation: 1s open-up forwards;
+}
+
+@keyframes open-up {
+  0% {
+    clip-path: inset(48% 34% 36% 35%);
+  }
+
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+
