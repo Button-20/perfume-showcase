@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import "./page.css";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 export default function Home() {
   useEffect(() => {
@@ -788,12 +789,20 @@ export default function Home() {
       </section>
       <div className="footer-bottom text-center py-3">
         <p>
-          © 2023 Fragrant. Designed by
+          © 2025 Fragrant. Designed by
           <a href="https://templatesjungle.com/" className="text-dark">
             <strong>TemplatesJungle</strong>
           </a>
         </p>
       </div>
+      <FloatingWhatsApp 
+        phoneNumber="+233550653404"
+        accountName="Fragrant Support"
+        statusMessage="Available 24/7"
+        chatMessage="Hello! How can we assist you today?"
+        avatar="https://ui-avatars.com/api/?name=Fragrant"
+        className="whatsapp-float"
+      />
     </>
   );
 }
