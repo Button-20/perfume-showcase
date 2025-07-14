@@ -18,5 +18,14 @@
     "titleBar.inactiveBackground": "#e192ed99",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#e192ed"
+  "peacock.color": "#e192ed",
+  "task.allowAutomaticTasks": true,
+  "debug.openDebug": "neverOpen",
+  "terminal.integrated.inheritEnv": false,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
 }
